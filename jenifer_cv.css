@@ -19,7 +19,7 @@
      }
 
     .cv_profile{
-        background-image: url(image/def.jpg);
+        /* background-image: url(image/def.jpg); */
         height: 240px;
         /* opacity: 0.1; */
         position: relative;
@@ -332,6 +332,7 @@
         /* height: 525px; */
         /* margin-right: 5px; */
         border-radius: 03px;
+    
        
     }
 
@@ -349,11 +350,13 @@
         margin-bottom: 3%;
     }
     .training{
-        padding: 12px 25px;
         overflow-y: scroll;
         flex-flow: column;
         height: 450px;
         border-radius: 0px 0px 5px 5px; 
+        font-size: 17px;
+        letter-spacing: 1px;
+        /* line-height: 0px; */
         /* margin-top: 10px; */
     }
 
@@ -441,12 +444,14 @@
         font-size: 17px;
         letter-spacing: 1px;
         margin-top: 5px;
+        margin-left: 12px;
     }
 
     .ligne1{ 
-    color: rgb(212, 212, 212);
+    color: transparent;
     border-color: rgb(221, 222, 224);
     margin-top: 10px;
+    margin-left: 12px;
     /* margin-left: 20px; */
     /* margin-right: 20px; */
     }
@@ -461,10 +466,10 @@
     .point_interet{
         grid-area: point_interet;
         height: inherit;
-        width: 60%;
+        margin-bottom: 17px;
         padding: 12px 25px;
         background-color: white;
-        margin-right: 3%;
+        /* margin-right: 3%; */
     }
 
     .entertain{
@@ -479,9 +484,9 @@
     .langue{
         grid-area: langue;
         /* height: 120px; */
-        width: 37%;
+        margin-bottom: 17px;
         background-color: white;
-        padding: 15px;
+        padding: 12px 25px;
     }
 
     .lang{
