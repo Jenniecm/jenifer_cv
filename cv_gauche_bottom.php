@@ -61,82 +61,33 @@
         </div>
 
         <?php } ?>
-<!-- 
-        <div class="competence">
-            <img src="image/tick_box.png" alt="">
-            <div style="flex: 1;">
-                <div class="competence_dev">
-                    <h4 class="text1"> Developpement Front End</h4>
-                    <img src="image/star.png" height="15" width="15" alt="">
-                </div>
-                <p class="text1">HTML5, SASS, VueJS, Angular</p>
-                <div class="progression">
-                    <div class="progression_bar" style="width: 70%;"></div>
-                    <span class="progression_circle" style="right: 30%;"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="competence">
-            <img src="image/tick_box.png" alt="">
-            <div style="flex: 1;">
-                <div class="competence_dev">
-                    <h4 class="text1"> Developpement Front End</h4>
-                    <img src="image/star.png" height="15" width="15" alt="">
-                </div>
-                <p class="text1">HTML5, SASS, VueJS, Angular</p>
-                <div class="progression">
-                    <div class="progression_bar" style="width: 80%;"></div>
-                    <span class="progression_circle" style="right: 20%;"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="competence">
-            <img src="image/tick_box.png" alt="">
-            <div style="flex: 1;">
-                <div class="competence_dev">
-                    <h4 class="text1"> Developpement Front End</h4>
-                    <img src="image/star.png" height="15" width="15" alt="">
-                </div>
-                <p class="text1">HTML5, SASS, VueJS, Angular</p>
-                <div class="progression">
-                    <div class="progression_bar" style="width: 60%;"></div>
-                    <span class="progression_circle" style="right: 40%;"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="competence">
-            <img src="image/tick_box.png" alt="">
-            <div style="flex: 1;">
-                <div class="competence_dev">
-                    <h4 class="text1"> Developpement Front End</h4>
-                    <img src="image/star.png" height="15" width="15" alt="">
-                </div>
-                <p class="text1">HTML5, SASS, VueJS, Angular</p>
-                <div class="progression">
-                    <div class="progression_bar" style="width: 95%;"></div>
-                    <span class="progression_circle" style="right: 5%;"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="competence">
-            <img src="image/tick_box.png" alt="">
-            <div style="flex: 1;">
-                <div class="competence_dev">
-                    <h4 class="text1"> Developpement Front End</h4>
-                    <img src="image/star.png" height="15" width="15" alt="">
-                </div>
-                <p class="text1">HTML5, SASS, VueJS, Angular</p>
-                <div class="progression">
-                    <div class="progression_bar" style="width: 85%;"></div>
-                    <span class="progression_circle" style="right: 15%;"></span>
-                </div>
-            </div>
-        </div> -->
-
-
     </div>
 
+<?php 
+
+class Competency {
+    public $dev_type;
+    public $used_tech;
+    public $progression;
+
+    public function __construct($dev_type, $used_tech, $progression)
+    {
+        $this->dev_type= $dev_type;
+        $this->used_tech=$used_tech;
+        $this->progression;
+    }
+
+    public function get_dev_type(){
+        return $this->dev_type;
+    }
+
+    public function get_used_tech(){
+        return $this->used_tech;
+    }
+
+    public function get_progression(){
+        return $this->progression;
+    }
+}
+
+?>

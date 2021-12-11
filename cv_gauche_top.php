@@ -15,9 +15,8 @@
     $i = "image/photocv.jpeg";
     $img = "image/def.jpg";
 
+?>
 
-
-    ?>
 
 <div class="cv_gauche_top carte ">
     <div class="cv_profile" style="background-image: url(<?= $img ?>);">
@@ -37,9 +36,35 @@
             </div>
         </div>
 
-        <div class="push_btn">
-            <span class="plus">+</span>
+        <div class="push_btn1" id="btn_send_mail" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img class="icon_img" src="icons/mail.png">
         </div>
+
+
+        <div class="push_btn2" id="btn_pdf">
+            <img class="icon_img" src="image/pdf.png">
+        </div>
+        <div class="push_btn" id="btn" onclick="activate_btn();">
+            <img class="plus" src="image/email_send.png">
+        </div>
+
+        <script>
+            function activate_btn() {
+                if (document.getElementById('btn').className == 'push_btn') {
+                    document.getElementById('btn').className = 'push_btn_activate';
+                    document.getElementById('btn_send_mail').className = 'push_btn1_activate';
+                    document.getElementById('btn_pdf').className = 'push_btn2_activate';
+                } else {
+                    document.getElementById('btn').className = 'push_btn';
+                    document.getElementById('btn_send_mail').className = 'push_btn1';
+                    document.getElementById('btn_pdf').className = 'push_btn2';
+
+                }
+
+            }
+        </script>
+
+
     </div>
 
     <div class="contenu">
@@ -119,3 +144,87 @@
 
 
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <center>
+                    <h5 class="modal-title" id="exampleModalLabel">Share your CV</h5>
+                </center>
+                <button type="button" class="btn-close" name="send_mail" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <form method="POST" action="send_mail.php">
+                <div class="modal-body">
+                    <p> Enter your email</p>
+                    <input placeholder="user@mail.com" name="mailing" name="sendEmail" maxlength="50" type="email">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<?php 
+
+class Profil  {
+    public $profile_pict;
+    public $date_naissance;
+    public $division;
+    public $status;
+    public $residance;
+    public $ville;
+    public $pays;
+    public $num;
+    public $mail_address;
+
+    public function __construct(string $profile_pict, string $date_naissance, string $division,
+    string $status, string $residence, string $ville, string $pays, string $num, string $mail_address)
+    {
+       $this-> profile_pict = $profile_pict;
+       $this-> date_naissance = $date_naissance;
+       $this-> division = $division;
+       $this-> status =$status;
+       $this-> residence =$residence;
+       $this-> ville= $ville;
+       $this-> pays = $pays;
+       $this-> num= $num;
+       $this-> mail_address= $mail_address; 
+    }
+
+    public function get_profile_pict ($profile_pict){
+        return $this->profile_pict;
+    }
+
+    public function get_date_naissance($date_naissance){
+        return $this->date_naissance;
+    }
+    public function get_division ($division){
+        return $this->division;
+    }
+    public function get_status($status){
+        return $this->status;
+    }
+    public function get_residence($residence){
+        return $this->residence;
+    }
+    public function get_ville($ville){
+        return $this->ville;
+    }
+    public function get_pays($pays){
+        return $this->pays;
+    }
+    public function get_num($num){
+        return $this->num;
+    }
+    public function get_mail_address($mail_address){
+        return $this->mail_address;
+    }
+
+}
+
+?>

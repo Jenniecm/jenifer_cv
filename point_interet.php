@@ -4,6 +4,7 @@
 
 ?>    
 <div class="point_interet carte">
+
         <div>
             <h3>Point d'interets</h3>
             <i> Simple passe temps pour se faire un peu plaisir</i>
@@ -15,4 +16,22 @@
             <?php } ?>
         </div>
        
-    </div>
+</div>
+
+
+<?php 
+
+class interets {
+    public $loisir;
+
+    public function __construct(string $loisir) {
+        $this->loisir= $loisir;
+    }
+
+    public function get_loisir (string $loisir){
+        return $this->loisir;
+    }
+    
+}
+
+?>    

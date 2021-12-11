@@ -18,3 +18,18 @@
         </div>
         <?php } ?>
     </div>
+
+<?php 
+
+class langue{
+    public $langue;
+
+    public function __construct(string $langue){
+        $this->langue;
+    }
+    public function get_langue(){
+        return $this->langue;
+    }
+}
+
+?>
